@@ -1,0 +1,111 @@
+{
+  "name": "@taufiktriantono/web-components",
+  "description": "component library",
+  "version": "1.0.2",
+  "private": false,
+  "license": "SEE LICENSE IN LICENSE.md",
+  "author": "Taufik Triantono",
+  "engines": {
+    "node": ">=18.12.0"
+  },
+  "files": [
+    "dist/",
+    "!dist/tests/",
+    "!dist/playground/",
+    "locales/"
+  ],
+  "sideEffects": [
+    "**/*.css",
+    "**/*.scss"
+  ],
+  "keywords": [
+    "react",
+    "components",
+    "component library"
+  ],
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc && vite build",
+    "dev": "yarn run storybook",
+    "lint": "eslint . --ext .ts,.tsx --ignore-path .gitignore --fix",
+    "test": "vitest run",
+    "test-watch": "vitest",
+    "test:ui": "vitest --ui",
+    "format": "prettier --write --parser typescript '**/*.{ts,tsx}'",
+    "start": "serve ./build-internal/storybook/static -l ${STORYBOOK_PORT:=6006}",
+    "storybook": "storybook dev -p 6006",
+    "storybook:build": "storybook build -o build-internal/storybook/static",
+    "storybook:test": "test-storybook"
+  },
+  "dependencies": {
+    "@storybook/test-runner": "^0.16.0",
+    "@types/react": "*",
+    "@types/react-dom": "*"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@shopify/typescript-configs": "^5.1.0",
+    "@storybook/addon-a11y": "^7.6.13",
+    "@storybook/addon-essentials": "^7.6.13",
+    "@storybook/addon-interactions": "^7.6.13",
+    "@storybook/addon-links": "^7.6.13",
+    "@storybook/addon-mdx-gfm": "^7.6.13",
+    "@storybook/addon-onboarding": "^1.0.11",
+    "@storybook/addon-styling-webpack": "^0.0.6",
+    "@storybook/addon-themes": "^7.6.13",
+    "@storybook/addon-toolbars": "^7.6.13",
+    "@storybook/addon-viewport": "^7.6.13",
+    "@storybook/api": "^7.6.13",
+    "@storybook/blocks": "^7.6.13",
+    "@storybook/components": "^7.6.13",
+    "@storybook/manager-api": "^7.6.13",
+    "@storybook/preset-create-react-app": "^7.6.13",
+    "@storybook/preview-api": "^7.6.13",
+    "@storybook/react": "^7.6.13",
+    "@storybook/react-vite": "^7.6.13",
+    "@storybook/react-webpack5": "^7.6.13",
+    "@storybook/test": "^7.6.13",
+    "@types/node": "^16.11.11",
+    "@types/react-transition-group": "^4.4.2",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-loader": "^8.1.0",
+    "change-case": "^3.1.0",
+    "chromatic": "^6.5.4",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-storybook": "^0.6.15",
+    "postcss": "^8.3.1",
+    "prettier": "^3.2.5",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rimraf": "^3.0.0",
+    "sass": "^1.70.0",
+    "sass-loader": "^12.4.0",
+    "serve": "^14.2.0",
+    "storybook": "^7.6.13",
+    "tailwindcss": "^3.4.1",
+    "vite": "*",
+    "vite-plugin-dts": "^3.7.2"
+  },
+  "browserslist": [
+    "last 3 chrome versions",
+    "last 3 firefox versions",
+    "last 3 opera versions",
+    "last 3 edge versions",
+    "last 3 safari versions",
+    "last 3 chromeandroid versions",
+    "last 1 firefoxandroid versions",
+    "ios >= 13.4"
+  ]
+}

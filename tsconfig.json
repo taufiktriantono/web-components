@@ -1,0 +1,22 @@
+{
+  "extends": "@shopify/typescript-configs/library",
+  "compilerOptions": {
+    "outDir": "dist",
+    "composite": true,
+    "strictFunctionTypes": false,
+    "paths": {
+      "tests/*": ["./tests/*"]
+    },
+    "jsx": "react-jsx"
+  },
+  "include": [
+    "./src",
+    "./src/**/*.json",
+    "./locales/**/*.json",
+    "./tests",
+    "./playground",
+    ".storybook/**/*.ts",
+    ".storybook/**/*.tsx"
+  ],
+  "exclude": ["./src/components/**/*.stories.tsx"]
+}

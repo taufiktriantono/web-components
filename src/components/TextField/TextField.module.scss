@@ -1,0 +1,9 @@
+@import '../../style.scss';
+
+.TextField {
+  border: 1px solid var(--gray-500);
+  color: var(--gray-700);
+  display: block;
+  padding: 8px;
+  border-radius: 6px;
+}
