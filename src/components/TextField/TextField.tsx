@@ -6,6 +6,8 @@ import { Label } from "./components/Label";
 import styles from "./TextField.module.scss";
 
 export interface TextFieldProps {
+  label: string;
+
   type: HTMLInputTypeAttribute;
 
   placeholder?: string;
@@ -14,8 +16,9 @@ export interface TextFieldProps {
 }
 
 export function TextField({
-  type = "email",
-  placeholder = "Your email",
+  label,
+  type,
+  placeholder,
   onClick = () => {},
   ...props
 }: TextFieldProps) {
@@ -23,7 +26,7 @@ export function TextField({
 
   return (
     <>
-      <Label label="Email" />
+      <Label label={label} />
       <input
         type={type}
         placeholder={placeholder}
